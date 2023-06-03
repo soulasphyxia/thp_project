@@ -1,3 +1,5 @@
+import model.AirCompany;
+
 import javax.swing.*;
 import java.lang.reflect.InvocationTargetException;
 
@@ -11,7 +13,8 @@ public class Main {
     public static class initFrame implements Runnable{
         @Override
         public void run() {
-            new ApplicationFrame();
+            AirCompany airCompany = AircompanyFactory.createAirCompany();
+            new ApplicationFrame(airCompany);
         }
     }
 

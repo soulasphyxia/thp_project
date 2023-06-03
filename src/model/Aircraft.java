@@ -1,3 +1,5 @@
+package model;
+
 public abstract class Aircraft {
     private String type;
     private int seatingCapacity;
@@ -5,10 +7,8 @@ public abstract class Aircraft {
 
     public void fly(){}
 
-    public Aircraft(String type, int seatingCapacity, int weightLifting) {
-        this.type = type;
+    public Aircraft(int seatingCapacity) {
         this.seatingCapacity = seatingCapacity;
-        this.weightLifting = weightLifting;
     }
 
     public String getType() {

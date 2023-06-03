@@ -1,10 +1,12 @@
+package model;
+
 public class PassengerPlane extends Plane {
     private String[] crew;
     private String[] classes;
     private boolean restaurant;
 
-    public PassengerPlane(String type, int seatingCapacity, int weightLifting, String model) {
-        super(type, seatingCapacity, weightLifting, model);
+    public PassengerPlane(int seatingCapacity,String model) {
+        super(seatingCapacity, model);
 
     }
 
