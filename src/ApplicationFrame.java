@@ -43,7 +43,7 @@ public class ApplicationFrame extends JFrame{
 
         JButton editButton = new JButton("edit");
         editButton.setBounds(30,140,80,20);
-        editButton.addActionListener(e -> new EditButtonDialog(this, planeList.getSelectedIndex()));
+        editButton.addActionListener(e -> new EditButtonDialog(this));
         add(editButton);
 
         JButton deleteButton = new JButton("delete");
@@ -133,10 +133,9 @@ public class ApplicationFrame extends JFrame{
     }
 
     public static class EditButtonDialog extends JDialog {
-        private final int selectedIndex;
-        public EditButtonDialog(Frame owner, int selectedIndex) {
+        private  int selectedIndex;
+        public EditButtonDialog(Frame owner) {
             super(owner,"edit");
-            this.selectedIndex = selectedIndex;
             setSize(200,250);
             setLocationRelativeTo(null);
             setLayout(null);
